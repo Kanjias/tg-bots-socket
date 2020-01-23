@@ -2,8 +2,8 @@
 	require_once('/var/www/.mysql.credentials.php');
 
 	class DB extends DB_Credentials {
-		private static $_db_host 			= "localhost";
-		private static $_db_name			= "kanjias_bots";
+		private static $_db_host 			= "localhost"; //Change to your database Host, if it's not on localhost
+		private static $_db_name			= "kanjias_bots"; //Change to your database name
 		private static $_db;	
 		
 		function __construct() {
