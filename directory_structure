@@ -1,6 +1,6 @@
 ./mysql.php => Database File
 ./socket.php => The Socket itself
-./authorized_tokens.php => The Tokens that are allowed to add new Bots via the web interface - see example.authorized_tokens.php for file structure
+./settings.php => settings-file - see example.settings.php for file structure
 ./index.php => The interface to add new Bot Endpoints
 ./{Bot-ID}_{Bot-Abbreviation}/main.php => The Main Program of the bot called through the socket.php
 /var/www/.mysql.credentials.php => MySQL Credentials - See .mysql.credentials.php in this directory for an example how this should look like
