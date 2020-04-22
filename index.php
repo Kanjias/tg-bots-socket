@@ -11,6 +11,7 @@
         for ($i = 0; $i < $length; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
+        return $randomString;
     }
 
     if (!isset($_GET['create'])) {
@@ -22,8 +23,8 @@
         $token = generateToken(settings::$tokenLength);
 
         if (settings::$authRequired) {
-            if ($_POST['auth'] == in_array($auth, auth_tokens::$auth_tokens)) {
-                $status = $db->createApp($abbr, $name, $token, $uaid);//$abbr, $name, $token, $uaid
+            if (in_array($_POST['auth'], settings::$auth_tokens)) {
+                $status = $db->createApp($_POST['abbr'], $_POST['name'], $token, $uaid);//$abbr, $name, $token, $uaid
                 if ($status == 1) {
                     $create = "success";
                 } else {
@@ -48,12 +49,6 @@
 	<head>
 		<meta charset="utf-8">
         <title>APP-Creation</title>
-        <link rel="stylesheet" href="./styles/bootstrap.min.css">
-        <link rel="stylesheet" href="./styles/bootstrap-grid.min.css">
-        <link rel="stylesheet" href="./styles/bootstrap-reboot.min.css">
-        <script src="./js/jquery-3.4.1.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 
     <?php
