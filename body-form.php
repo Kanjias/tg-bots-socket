@@ -17,7 +17,7 @@
                     }
                 ?>>
                 <td>Auth_Token </td>
-                <td><input type="text" name="auth" <?php
+                <td><input type="password" name="auth" <?php
                         if (settings::$authRequired) {
                             echo "required";
                         }
