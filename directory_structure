@@ -4,3 +4,5 @@
 ./index.php => The interface to add new Bot Endpoints
 ./{Bot-ID}_{Bot-Abbreviation}/main.php => The Main Program of the bot called through the socket.php
 /var/www/.mysql.credentials.php => MySQL Credentials - See .mysql.credentials.php in this directory for an example how this should look like
+
+{Bot-ID} = dbID (database ID)

@@ -1,5 +1,6 @@
 <?php
-	require_once('/var/www/.mysql.credentials.php');
+	require_once('settings.php');
+	require_once($mySQL_CredentialFile);
 
 	class DB extends DB_Credentials {
 		private static $_db;	
